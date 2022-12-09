@@ -16,32 +16,12 @@ model User {
   email     String @unique
   password  String
   purchases Book[]
-  Sale      Sale[]
-}
-
-model Author {
-  id    Int    @id @default(autoincrement())
-  name  String
-  books Book[]
 }
 
 model Book {
-  id         Int    @id @default(autoincrement())
-  title      String
-  author     Author @relation(fields: [authorId], references: [id])
-  price      Float
-  sales      Sale[]
-  User       User?  @relation(fields: [userId], references: [id])
-  userId     Int?
-  authorId   Int
-  categoryId Int
-}
-
-model Sale {
-  id       Int      @id @default(autoincrement())
-  book     Book     @relation(fields: [bookId], references: [id])
-  customer User     @relation(fields: [userId], references: [id])
-  date     DateTime @default(now())
-  bookId   Int
-  userId   Int
+  id     Int    @id @default(autoincrement())
+  title  String
+  price  Float
+  User   User?  @relation(fields: [userId], references: [id])
+  userId Int?
 }

@@ -12,8 +12,6 @@ describe('BookImplementation', () => {
     id: 1,
     title: 'The Hobbit',
     userId: 1,
-    authorId: 1,
-    categoryId: 1,
     price: 10,
   };
 
