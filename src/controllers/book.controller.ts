@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
 import { Book } from '@prisma/client';
-import { BookUseCase } from '@use-cases';
+import { GetUniqueBookUseCase } from '@use-cases';
 
 @Controller('book')
 export class BookController {
-  constructor(private readonly bookUseCase: BookUseCase) {}
+  constructor(private readonly getUniqueBookUseCase: GetUniqueBookUseCase) {}
   @Get()
   async getById(): Promise<Book> {
-    return this.bookUseCase.getById(1);
+    return this.getUniqueBookUseCase.execute(1);
   }
 }

@@ -3,13 +3,13 @@ import { BookController } from '@controllers';
 import { Module } from '@nestjs/common';
 import { BookRepository } from '@repositories';
 import { PrismaBookRepository } from '@repositories/prisma';
-import { BookUseCase } from '@use-cases';
+import { GetUniqueBookUseCase } from '@use-cases';
 
 @Module({
   controllers: [BookController],
   providers: [
     PrismaService,
-    BookUseCase,
+    GetUniqueBookUseCase,
     {
       provide: BookRepository,
       useClass: PrismaBookRepository,

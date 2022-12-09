@@ -1,1 +1,1 @@
-export * from './book.usecase';
+export * from './book/get-unique.usecase';
