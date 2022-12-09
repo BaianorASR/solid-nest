@@ -18,10 +18,12 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
-      - name: Build production bundle
+      - name: Prebuild
         uses: borales/actions-yarn@v4
         with:
           cmd: prebuild # will run `yarn prebuild` command
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
         with:
           cmd: build # will run `yarn build:prod` command
       - name: Test the app
