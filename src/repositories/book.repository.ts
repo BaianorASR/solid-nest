@@ -1,4 +1,4 @@
-import { IBook } from '../entities/book.entity';
+import { IBook } from '@entities/book.entity';
 
 export interface IBookRepository {
   getById(id: number): Promise<IBook>;

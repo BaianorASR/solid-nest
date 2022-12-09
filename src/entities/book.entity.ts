@@ -6,6 +6,10 @@ export class BookEntity {
   rating: number;
   cover: string;
   id: number;
+
+  constructor(dto: Partial<BookEntity>) {
+    Object.assign(this, dto);
+  }
 }
 
 export interface IBook {
