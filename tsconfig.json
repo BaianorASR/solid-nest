@@ -21,6 +21,7 @@
     "moduleResolution": "NodeNext",
     "paths": {
       "@app": ["src"],
+      "@common/db/*": ["src/common/database/*"],
       "@config": ["src/config"],
       "@dtos": ["src/dtos"],
       "@interfaces": ["src/interfaces"],
@@ -31,7 +32,7 @@
       "@modules": ["src/modules"],
       "@controllers": ["src/controllers"],
       "@repositories": ["src/repositories"],
-      "@implementations": ["src/repositories/implementations"],
+      "@repositories/prisma": ["src/repositories/prisma"],
       "@use-cases": ["src/use-cases"]
     }
   }

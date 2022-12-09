@@ -1,16 +1,18 @@
+import { PrismaService } from '@common/db/prisma/prisma.service';
 import { BookController } from '@controllers';
-import { BookImplementation } from '@implementations';
 import { Module } from '@nestjs/common';
-import { IBookRepository } from '@repositories';
+import { BookRepository } from '@repositories';
+import { PrismaBookRepository } from '@repositories/prisma';
 import { BookUseCase } from '@use-cases';
 
 @Module({
   controllers: [BookController],
   providers: [
+    PrismaService,
     BookUseCase,
     {
-      provide: IBookRepository,
-      useClass: BookImplementation,
+      provide: BookRepository,
+      useClass: PrismaBookRepository,
     },
   ],
 })

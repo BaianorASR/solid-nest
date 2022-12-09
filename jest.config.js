@@ -11,6 +11,7 @@ const config = {
   testEnvironment: 'node',
   moduleNameMapper: {
     '@app$': '<rootDir>',
+    '@common/db(.*)$': '<rootDir>/common/database/$1',
     '@config$': '<rootDir>/config',
     '@dtos$': '<rootDir>/dtos',
     '@interfaces$': '<rootDir>/interfaces',
@@ -21,7 +22,7 @@ const config = {
     '@modules$': '<rootDir>/modules',
     '@controllers$': '<rootDir>/controllers',
     '@repositories$': '<rootDir>/repositories',
-    '@implementations$': '<rootDir>/repositories/implementations',
+    '@repositories/prisma$': '<rootDir>/repositories/prisma',
     '@use-cases$': '<rootDir>/use-cases',
   },
 };

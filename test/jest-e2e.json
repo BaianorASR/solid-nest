@@ -8,6 +8,7 @@
   },
   "moduleNameMapper": {
     "@app$": "<rootDir>/../src",
+    "@common/db(.*)$": "<rootDir>../src/common/database/$1",
     "@config$": "<rootDir>/../src/config",
     "@dtos$": "<rootDir>/../src/dtos",
     "@interfaces$": "<rootDir>/../src/interfaces",
@@ -18,7 +19,7 @@
     "@modules$": "<rootDir>/../src/modules",
     "@controllers$": "<rootDir>/../src/controllers",
     "@repositories$": "<rootDir>/../src/repositories",
-    "@implementations$": "<rootDir>/../src/repositories/implementations",
+    "@repositories/prisma$": "<rootDir>/repositories/prisma",
     "@use-cases$": "<rootDir>/../src/use-cases"
   }
 }

@@ -1,7 +1,5 @@
-import { IBook } from '@entities';
+import { Book } from '@prisma/client';
 
-export interface IBookRepository {
-  getById(id: number): Promise<IBook>;
+export abstract class BookRepository {
+  abstract getById(id: number): Promise<Book>;
 }
-
-export const IBookRepository = Symbol('IBookRepository');
