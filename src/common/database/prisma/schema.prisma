@@ -25,20 +25,13 @@ model Author {
   books Book[]
 }
 
-model Category {
-  id    Int    @id @default(autoincrement())
-  name  String
-  books Book[]
-}
-
 model Book {
-  id         Int      @id @default(autoincrement())
+  id         Int    @id @default(autoincrement())
   title      String
-  author     Author   @relation(fields: [authorId], references: [id])
-  category   Category @relation(fields: [categoryId], references: [id])
+  author     Author @relation(fields: [authorId], references: [id])
   price      Float
   sales      Sale[]
-  User       User?    @relation(fields: [userId], references: [id])
+  User       User?  @relation(fields: [userId], references: [id])
   userId     Int?
   authorId   Int
   categoryId Int
