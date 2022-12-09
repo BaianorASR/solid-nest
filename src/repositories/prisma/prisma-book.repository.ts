@@ -1,5 +1,4 @@
-import { CreateBookDto } from 'src/dtos/create-book.dto';
-
+import { CreateBookDto } from '@app/dtos/create-book.dto';
 import { PrismaService } from '@common/db/prisma/prisma.service';
 import { Injectable } from '@nestjs/common';
 import { Book } from '@prisma/client';

@@ -20,7 +20,7 @@
     "esModuleInterop": true,
     "moduleResolution": "NodeNext",
     "paths": {
-      "@app": ["src"],
+      "@app/*": ["src/*"],
       "@common/db/*": ["src/common/database/*"],
       "@config": ["src/config"],
       "@dtos": ["src/dtos"],

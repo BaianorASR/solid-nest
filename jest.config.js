@@ -10,7 +10,7 @@ const config = {
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
   moduleNameMapper: {
-    '@app$': '<rootDir>',
+    '@app(.*)$': '<rootDir>/$1',
     '@common/db(.*)$': '<rootDir>/common/database/$1',
     '@config$': '<rootDir>/config',
     '@dtos$': '<rootDir>/dtos',

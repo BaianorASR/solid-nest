@@ -1,5 +1,4 @@
-import { CreateBookDto } from 'src/dtos/create-book.dto';
-
+import { CreateBookDto } from '@app/dtos/create-book.dto';
 import { Book } from '@prisma/client';
 
 export abstract class BookRepository {
