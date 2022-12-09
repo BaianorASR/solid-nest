@@ -1,4 +1,4 @@
-import { BookEntity, IBook } from '@entities/book.entity';
+import { BookEntity, IBook } from '@entities';
 import { Injectable } from '@nestjs/common';
 
 import { IBookRepository } from '../book.repository';

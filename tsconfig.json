@@ -18,32 +18,21 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "paths": {
-      "@config/*": ["src/config/*"],
+      "@app": ["src"],
       "@config": ["src/config"],
-      "@dtos/*": ["src/dtos/*"],
       "@dtos": ["src/dtos"],
-      "@interfaces/*": ["src/interfaces/*"],
       "@interfaces": ["src/interfaces"],
-      "@exceptions/*": ["src/exceptions/*"],
       "@exceptions": ["src/exceptions"],
-      "@constants/*": ["src/constants/*"],
       "@constants": ["src/constants"],
-      "@decorators/*": ["src/decorators/*"],
       "@decorators": ["src/decorators"],
-      "@entities/*": ["src/entities/*"],
       "@entities": ["src/entities"],
-      "@modules/*": ["src/modules/*"],
       "@modules": ["src/modules"],
-      "@controllers/*": ["src/controllers/*"],
       "@controllers": ["src/controllers"],
-      "@repositories/*": ["src/repositories/*"],
       "@repositories": ["src/repositories"],
-      "@use-cases/*": ["src/use-cases/*"],
-      "@use-cases": ["src/use-cases"],
-      "@implementations/*": ["src/repositories/implementations/*"],
-      "@implementations": ["src/repositories/implementations"]
+      "@implementations": ["src/repositories/implementations"],
+      "@use-cases": ["src/use-cases"]
     }
   }
 }

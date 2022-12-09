@@ -1,8 +1,8 @@
-import { BookController } from '@controllers/book.controller';
-import { BookImplementation } from '@implementations/book.implementation';
+import { BookController } from '@controllers';
+import { BookImplementation } from '@implementations';
 import { Module } from '@nestjs/common';
-import { IBookRepository } from '@repositories/book.repository';
-import { BookUseCase } from '@use-cases/book.usecase';
+import { IBookRepository } from '@repositories';
+import { BookUseCase } from '@use-cases';
 
 @Module({
   controllers: [BookController],

@@ -1,4 +1,4 @@
-import { BookModule } from '@modules/book.module';
+import { BookModule } from '@modules';
 import { Module } from '@nestjs/common';
 
 @Module({

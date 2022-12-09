@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { IBookRepository } from '@repositories/book.repository';
+import { IBookRepository } from '@repositories';
 
 @Injectable()
 export class BookUseCase {
