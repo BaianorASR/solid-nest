@@ -24,6 +24,7 @@ describe('BookImplementation', () => {
           useValue: {
             book: {
               findUnique: jest.fn(),
+              create: jest.fn(),
             },
           },
         },
@@ -47,6 +48,16 @@ describe('BookImplementation', () => {
       const result = await prismaBookRepository.getById(1);
 
       expect(result).toEqual(MockBook);
+    });
+  });
+
+  describe('create', () => {
+    it('should create a book', async () => {
+      jest.spyOn(prismaService.book, 'create').mockResolvedValue(MockBook);
+
+      await prismaBookRepository.create(MockBook);
+
+      expect(prismaService.book.create).toBeCalled();
     });
   });
 });
